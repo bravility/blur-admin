@@ -76,10 +76,10 @@
         });
     };
 
-    $scope.getFile = function () {
-      fileReader.readAsDataUrl($scope.file, $scope)
+    $scope.getFile = function (scope) {
+      fileReader.readAsDataUrl(scope.file, scope)
           .then(function (result) {
-            $scope.picture = result;
+            scope.picture = result;
           });
     };
 
